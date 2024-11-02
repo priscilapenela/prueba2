@@ -1,0 +1,215 @@
+.logo{
+    cursor: pointer;
+    text-align: center;
+    padding-left: 40%; 
+}
+
+.logo  h1:hover {
+   transform: scale(1.2);
+}
+
+.logo  h1{
+  transition: all 0.3s;
+}
+
+.header_top {
+    width: 100%;
+    background-color: #021d3b;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 16px;
+}
+
+.header_top .conteiner{
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 50px;
+}
+
+.header_top .conteiner .box .logo{
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    color: white;
+    text-decoration: none;
+}
+
+.header_top .conteiner .boxBA{
+    display: flex;
+    justify-content: end;
+}
+
+.header_top .conteiner .boxBA .ba{
+    display: flex;
+    align-items: center;
+}
+
+.header_top .conteiner .boxBA .ba a{
+    text-decoration: none;
+    width: 100%;
+    line-height: 45px;
+    color: #fff;
+    transition: background-color 0.3s ease;
+    font-size: 20px;
+    border-radius: 10px;
+    padding: 0px 20px;
+}
+
+.header_top .conteiner .boxBA .ba a:hover{
+    background-color: #fff;
+    color: #021d3b;
+    border-radius: 10px;
+}
+
+.header_top .conteiner .boxMenu{
+    display: flex;
+    justify-content: start;
+}
+
+.header_top .conteiner .boxMenu .menuButton{
+    display: flex;
+    align-items: center;
+}
+
+.header_top .conteiner .boxMenu .hamburgerMenu{
+    background: none;     /* Quita el fondo */
+    border: none;         /* Elimina el borde */
+    padding: 0;           /* Quita el padding */
+    margin: 0;            /* Elimina el margen */
+    font: inherit;        /* Usa la misma fuente que el contenedor */
+    color: #fff;       /* Hereda el color */
+    cursor: pointer;      /* Cambia el cursor al de "clickeable" */
+    outline: none;        /* Elimina el borde de foco */
+    box-shadow: none;     /* Remueve cualquier sombra */
+}
+
+.menu {
+    list-style: none;
+}
+
+.menu li {
+    padding: 10px;
+}
+
+.menu li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.menu li a svg {
+    margin-right: 10px;
+}
+
+.submenu {
+    margin-left: 20px;
+    list-style: none;
+}
+
+.submenu li a {
+    font-size: 14px;
+    color: #bdc3c7;
+}
+
+@media screen and (max-width: 1400px) {
+    .header_top .conteiner .boxMenu{
+        display: flex;
+        justify-content: center;
+    }
+
+    .header_top .conteiner .boxBA{
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 800px) {
+   
+    .header_top .conteiner .boxMenu{
+        display: flex;
+        justify-content: center;
+    }
+    
+    .header_top .conteiner{
+        height: 60px;
+    }
+
+    .header_top .conteiner .box .logo {
+        display: none; /* Oculta el logo en pantallas pequeñas */
+    }
+    
+    .header_top .conteiner .boxBA .ba {
+        display: none; /* Oculta el logo en pantallas pequeñas */
+    }
+
+    .sidebar {
+        width: 100px;
+    }
+    .menu li a {
+        font-size: 20px;
+    }
+    .menu li a svg {
+        display: none;
+    }
+}
+
+.menu li a:hover {
+    background-color: #005599;
+    color: #ffffff;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.menu li a svg:hover {
+    transform: scale(1.2);  
+    transition: transform 0.3s ease;
+}
+
+.sidebar h3 {
+    padding: 0px 30px;
+    text-transform: uppercase;
+    color: #ffffff;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100vh;
+    background-color: #021d3b;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    z-index: 999;
+}
+
+.sidebar.open {
+    transform: translateX(0);
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+    z-index: 998;
+}
+
+.overlay.open {
+    opacity: 1;
+    visibility: visible;
+}
+
+.desplegable  a:hover {
+   transform: scale(1.2);
+ 
+}
